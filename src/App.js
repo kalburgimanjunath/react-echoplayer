@@ -35,7 +35,8 @@ export default function App() {
             <Header />
             <Iframe iframe={demos['soundcloud']} allow="autoplay" />
           </Route>
-          <Route path="./*" exact>
+          <Route path="/*" exact>
+            <Header />
             <Login />
           </Route>
         </Switch>
