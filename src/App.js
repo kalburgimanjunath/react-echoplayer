@@ -6,7 +6,7 @@ import Signup from './pages/Signup';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 const demos = {
   soundcloud:
-    '<iframe style="position: absolute;width:99%;height:100%;overflow:auto" scrolling="yes" frameborder="no" allow="autoplay" src="https://kalburgimanjunath.github.io/danceforme/kids#/search/videos"></iframe>',
+    '<iframe style="position: absolute;width:99%;height:100%;overflow:hidden" scrolling="yes" frameborder="no" allow="autoplay" src="https://kalburgimanjunath.github.io/danceforme/kids#/search/videos"></iframe>',
 };
 
 //codesandbox.io/s/react-iframe-demo-g3vst codePen =

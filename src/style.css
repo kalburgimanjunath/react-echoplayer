@@ -2,6 +2,9 @@ h1,
 p {
   font-family: Lato;
 }
+body {
+  overflow: hidden;
+}
 .header {
   position: absolute;
   /* width: 200px; */
