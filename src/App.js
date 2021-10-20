@@ -1,8 +1,12 @@
 import React from 'react';
 import './style.css';
+import Header from './components/Header';
+import Login from './pages/Login';
+import Signup from './pages/Signup';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 const demos = {
   soundcloud:
-    '<iframe style="position: absolute;width:100%;height:100%;" scrolling="no" frameborder="no" allow="autoplay" src="https://kalburgimanjunath.github.io/danceforme/kids#/search/videos"></iframe>',
+    '<iframe style="position: absolute;width:99%;height:100%;overflow:auto" scrolling="yes" frameborder="no" allow="autoplay" src="https://kalburgimanjunath.github.io/danceforme/kids#/search/videos"></iframe>',
 };
 
 //codesandbox.io/s/react-iframe-demo-g3vst codePen =
@@ -16,8 +20,26 @@ function Iframe(props) {
 
 export default function App() {
   return (
-    <div className="App">
-      <Iframe iframe={demos['soundcloud']} allow="autoplay" />,
-    </div>
+    <Router>
+      <div className="App">
+        <Switch>
+          <Route path="/login">
+            <Header />
+            <Login />
+          </Route>
+          <Route path="/signup">
+            <Header />
+            <Signup />
+          </Route>
+          <Route path="/dashboard">
+            <Header />
+            <Iframe iframe={demos['soundcloud']} allow="autoplay" />
+          </Route>
+          <Route path="./*" exact>
+            <Login />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
