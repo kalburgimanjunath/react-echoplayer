@@ -3,6 +3,7 @@ import './style.css';
 import Header from './components/Header';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
+import Account from './pages/Account';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 const demos = {
   soundcloud:
@@ -24,19 +25,19 @@ export default function App() {
       <div className="App">
         <Switch>
           <Route path="/login">
-            <Header />
             <Login />
           </Route>
           <Route path="/signup">
-            <Header />
             <Signup />
+          </Route>
+          <Route path="/account">
+            <Account />
           </Route>
           <Route path="/dashboard">
             <Header />
             <Iframe iframe={demos['soundcloud']} allow="autoplay" />
           </Route>
           <Route path="/*" exact>
-            <Header />
             <Login />
           </Route>
         </Switch>

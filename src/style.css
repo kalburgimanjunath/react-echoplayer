@@ -1,3 +1,4 @@
+@import './css/style.css';
 h1,
 p {
   font-family: Lato;
@@ -11,7 +12,7 @@ body {
   right: 5px;
   z-index: 100;
   background: #000;
-  height: 18px;
+  /* height: 18px; */
   padding: 20px;
   background-color: #faca0b;
   text-decoration: none;
